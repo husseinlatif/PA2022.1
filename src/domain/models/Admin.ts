@@ -1,7 +1,12 @@
 import { IAdmin } from "../interfaces/IAdmin";
-import { Schema } from 'mongoose';
+import * as mongoose from 'mongoose';
+import commonOptions from "./Utils/schemaOptions";
 
-const usuarioSchema = new Schema<IAdmin>({
+const adminSchema = new mongoose.Schema<IAdmin>({
     name:{ type: String, required: true },
     password: { type: String, required: true }
-})
+}, commonOptions);
+
+const Admin = mongoose.model('Admins', adminSchema);
+export { Admin };
+

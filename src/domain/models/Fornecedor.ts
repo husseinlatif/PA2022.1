@@ -1,7 +1,11 @@
 import { IFornecedor } from "../interfaces/IFornecedor";
-import { Schema } from "mongoose";
+import * as mongoose from "mongoose";
+import commonOptions from "./Utils/schemaOptions";
 
-export const fornecedorSchema = new Schema<IFornecedor>({
+const fornecedorSchema = new mongoose.Schema<IFornecedor>({
     name: { type: String, required: true },
     taxaComissao: { type: Number, required: true }
-})
+}, commonOptions);
+
+const Fornecedor = mongoose.model('fornecedores', fornecedorSchema)
+export { Fornecedor };
