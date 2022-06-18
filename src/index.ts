@@ -1,4 +1,4 @@
-import * as dotenv from 'dotenv';
+import dotenv from 'dotenv';
 import express from 'express';
 
 dotenv.config();
@@ -11,3 +11,7 @@ const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`${process.env.APP_NAME} app listening at ${process.env.APP_URL}`);
   });
+
+app.get('/', (req,res) => {
+  res.send("WIIII");
+})
