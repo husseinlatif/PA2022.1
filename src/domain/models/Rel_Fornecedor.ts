@@ -2,8 +2,8 @@ import { IRel_Fornecedor } from "../interfaces/IRel_Fornecedor";
 import * as mongoose from 'mongoose';
 
 const relFornecedorSchema = new mongoose.Schema<IRel_Fornecedor>({
-    fornecedorId: { type: mongoose.Types.ObjectId, required: true },
-    produtos: { type:[{id:mongoose.Types.ObjectId, name:String, quantidade:Number, precoUnit: Number}], required:true},
+    fornecedorId: { type: Number, required: true },
+    produtos: { type:[{id:Number, name:String, quantidade:Number, precoUnit: Number}], required:true},
     valorTotalVendido: { type: Number, required: true },
     comissao: { type: Number, required: false },
     taxa: { type: Number, required: false },
@@ -13,5 +13,5 @@ const relFornecedorSchema = new mongoose.Schema<IRel_Fornecedor>({
     totalAPagar: { type: Number, required: true }
 })
 
-const Rel_Fornecedor = mongoose.model('rel_fornecedor', relFornecedorSchema);
+const Rel_Fornecedor = mongoose.model('rel_fornecedores', relFornecedorSchema);
 export { Rel_Fornecedor };

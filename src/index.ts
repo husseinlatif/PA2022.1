@@ -1,7 +1,11 @@
 import dotenv from 'dotenv';
 import express from 'express';
-import { Admin } from './domain/models/Admin';
 import { router } from './routes/routes';
+import mongoose from 'mongoose';
+import { createTables } from './database/createTables';
+
+mongoose.connect("mongodb://localhost:27017/fish_me");
+createTables();
 
 dotenv.config();
 
