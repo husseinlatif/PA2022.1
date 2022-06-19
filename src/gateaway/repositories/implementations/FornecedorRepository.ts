@@ -51,3 +51,5 @@ class FornecedorRepository implements IFornecedorRepository {
         }
     }
 }
+
+export { FornecedorRepository }

@@ -40,3 +40,5 @@ class ClienteRepository implements IClienteRepository {
         }
     }
 }
+
+export { ClienteRepository }
