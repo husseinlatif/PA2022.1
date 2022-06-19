@@ -1,4 +1,4 @@
-import { ICliente } from "../../domain/interfaces/ICliente"
+import { ICliente } from "../../../domain/interfaces/ICliente"
 
 export interface IClienteRepository {
     getAllClientes() : Promise<Array<ICliente>>;

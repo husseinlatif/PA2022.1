@@ -1,4 +1,4 @@
-import { IVenda } from "../../domain/interfaces/IVenda";
+import { IVenda } from "../../../domain/interfaces/IVenda";
 
 export interface IVendaRepository {
     getVendasEmAberto() : Promise<Array<IVenda>>; //para gerar o relatório de cobrança

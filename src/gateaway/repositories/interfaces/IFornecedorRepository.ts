@@ -1,4 +1,4 @@
-import { IFornecedor } from "../../domain/interfaces/IFornecedor"
+import { IFornecedor } from "../../../domain/interfaces/IFornecedor"
 
 export interface IFornecedorRepository {
     //talvez pensar na senha como um value object

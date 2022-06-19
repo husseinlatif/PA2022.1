@@ -1,4 +1,4 @@
-import { IRel_Fornecedor } from "../../domain/interfaces/IRel_Fornecedor";
+import { IRel_Fornecedor } from "../../../domain/interfaces/IRel_Fornecedor";
 
 export interface IRelFornecedorRepository {
     getRelByDay(wantedDate: Date) : Promise<IRel_Fornecedor>;
