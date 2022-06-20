@@ -30,13 +30,12 @@ abstract class BaseRepository implements IBaseRepository{
         }
     }
 
-    async addData(data: Object): Promise<Object> {
+    async addData(data: Object): Promise<void> {
         let newEntry = new this._model({...data});
         await newEntry.save((err) => {if(err) console.log(err)});
-        return newEntry;
     }
 
-    async updateData(id:Number, data: Object): Promise<boolean> {
+    async updateData(id:Number, data: Object): Promise<Boolean> {
         const options = { returnDocuments:'after' };
         try {
             let changedData = await this._model.updateOne({ _id:id }, {...data}, options).exec().then(res => res.acknowledged);
