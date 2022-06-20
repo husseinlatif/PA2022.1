@@ -1,8 +1,7 @@
-import { ICliente } from "../../../domain/interfaces/ICliente"
+import { IBaseRepository } from "./IBaseRepository";
 
-export interface IClienteRepository {
-    getAllClientes() : Promise<Array<ICliente>>;
-    getClienteByName(name:String) : Promise<ICliente>;
-    addCliente(name:String) : void;
-    removeCliente(id:Number) : Promise<Number>;
+interface IClienteRepository extends IBaseRepository {
+    //possíveis métodos diferentes
 }
+
+export { IClienteRepository };

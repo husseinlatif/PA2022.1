@@ -1,5 +1,5 @@
 import { IProdutoFornecedor } from "./IProdutoFornecedor";
-export interface IRel_Fornecedor {
+export interface IRelFornecedor {
     id:Number, //pode ser um GUID também
     fornecedorId: Number, //int
     produtos: Array<IProdutoFornecedor>,

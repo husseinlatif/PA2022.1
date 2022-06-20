@@ -3,11 +3,13 @@ import express from 'express';
 import { router } from './routes/routes';
 import mongoose from 'mongoose';
 import { createTables } from './database/createTables';
+import { AdminRepository } from './gateaway/repositories/implementations/AdminRepository';
 /* import { Produto } from './domain/models/Produto';
 import { ProdutoRepository } from './gateaway/repositories/implementations/ProdutoRepository'; */
 
 mongoose.connect("mongodb://localhost:27017/fish_me");
 createTables();
+
 
 
 

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/husseinlatif/desafiofullstack#readme",
   "dependencies": {
     "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
     "cors": "^2.8.5",
     "dotenv": "^8.6.0",
     "express": "^4.17.1",

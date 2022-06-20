@@ -1,7 +1,7 @@
-import { IRel_Fornecedor } from "../../../domain/interfaces/IRel_Fornecedor";
+import { IBaseRepository } from "./IBaseRepository";
 
-export interface IRelFornecedorRepository {
-    getRelByFornecedorNoDia(fornecedorId: Number, dia: Date) : Promise<IRel_Fornecedor>;
-    addRel(object: IRel_Fornecedor) : void;
-    //deleteRelsByDay(wantedDate: Date) : Promise <IRel_Fornecedor[]>;
+interface IRelFornecedorRepository extends IBaseRepository {
+    //possíveis métodos diferentes
 }
+
+export { IRelFornecedorRepository };

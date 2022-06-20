@@ -1,5 +1,5 @@
 import { Venda } from "../domain/models/Venda";
-import { Rel_Fornecedor } from "../domain/models/Rel_Fornecedor";
+import { RelFornecedor } from "../domain/models/RelFornecedor";
 import { Produto } from "../domain/models/Produto";
 import { Fornecedor } from "../domain/models/Fornecedor";
 import { Cliente } from "../domain/models/Cliente";
@@ -11,7 +11,7 @@ const createTables = () => {
     Produto.createCollection();
     Cliente.createCollection();
     Fornecedor.createCollection();
-    Rel_Fornecedor.createCollection();
+    RelFornecedor.createCollection();
 }
 
 export { createTables };

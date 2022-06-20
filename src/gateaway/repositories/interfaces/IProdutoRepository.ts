@@ -1,7 +1,7 @@
-import { IProduto } from "../../../domain/interfaces/IProduto";
+import { IBaseRepository } from "./IBaseRepository";
 
-export interface IProdutoRepository {
-    getAllProdutos() : Promise<Array<IProduto>>;
-    getProductById(id:Number) : Promise <IProduto>;
-    addProduct(name: String) : void;
+interface IProdutoRepository extends IBaseRepository {
+    //possíveis métodos diferentes
 }
+
+export { IProdutoRepository };
