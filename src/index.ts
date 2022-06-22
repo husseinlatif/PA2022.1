@@ -3,7 +3,7 @@ import express from 'express';
 import { router } from './routes/routes';
 import mongoose from 'mongoose';
 import { createTables } from './database/createTables';
-import { AdminRepository } from './gateaway/repositories/implementations/AdminRepository';
+import { AdminRepository } from './gateway/repositories/implementations/AdminRepository';
 /* import { Produto } from './domain/models/Produto';
 import { ProdutoRepository } from './gateaway/repositories/implementations/ProdutoRepository'; */
 
