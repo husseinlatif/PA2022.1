@@ -1,5 +1,5 @@
 import { IVenda } from "../../../domain/models/interfaces/IVenda";
-import { IVendaRepository } from "../../repositories/interfaces/IVendaRepository";
+import { IVendaRepository } from "../../../gateway/repositories/interfaces/IVendaRepository";
 import { IVendaUseCase } from "../interfaces/IVendaUseCase";
 
 class VendaUseCase implements IVendaUseCase {
