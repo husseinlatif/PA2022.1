@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
-import { IVendaUseCase } from "../../domain/usecases/interfaces/IVendaUseCase";
-import { BaseController } from "../BaseController";
+import { IVendaUseCase } from "../../../domain/usecases/interfaces/IVendaUseCase";
+import { BaseController } from "../../BaseController";
 
-export class getVendasEmAbertoController extends BaseController {
+export class GetVendasEmAbertoController extends BaseController {
 
     private vendaUseCase: IVendaUseCase;
 
@@ -16,8 +16,8 @@ export class getVendasEmAbertoController extends BaseController {
     protected async executeImpl(req: Request, res: Response): Promise<void | any> {
         try {
 
-            res = await this.vendaUseCase.getVendasEmAberto;
-            return this.sucesso<any>(res);
+            let result = await this.vendaUseCase.getVendasEmAberto();
+            return this.sucesso<any>(res, result);
 
         } catch (err) {
 
