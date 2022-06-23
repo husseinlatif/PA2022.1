@@ -1,4 +1,4 @@
-import { IVenda } from "../interfaces/IVenda";
+import { IVenda } from "./interfaces/IVenda";
 import * as mongoose from 'mongoose';
 import commonOptions from "./Utils/schemaOptions";
 

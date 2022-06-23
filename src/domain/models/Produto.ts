@@ -1,4 +1,4 @@
-import { IProduto } from "../interfaces/IProduto";
+import { IProduto } from "./interfaces/IProduto";
 import * as mongoose from 'mongoose';
 import commonOptions from "./Utils/schemaOptions";
 

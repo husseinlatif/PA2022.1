@@ -1,6 +1,6 @@
-import { IProduto } from "../../../domain/interfaces/IProduto";
+import { IProduto } from "../../models/interfaces/IProduto";
 
-export interface IProdutoService {
+export interface IProdutoUseCase {
     getAllProdutos() : Promise<Array<IProduto>>;
     getProductById(id:Number) : Promise <IProduto>;
     addProduct(name: String) : void;

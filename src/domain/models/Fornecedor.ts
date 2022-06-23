@@ -1,4 +1,4 @@
-import { IFornecedor } from "../interfaces/IFornecedor";
+import { IFornecedor } from "./interfaces/IFornecedor";
 import * as mongoose from "mongoose";
 import commonOptions from "./Utils/schemaOptions";
 

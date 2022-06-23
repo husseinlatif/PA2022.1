@@ -1,4 +1,4 @@
-import { IAdmin } from "../interfaces/IAdmin";
+import { IAdmin } from "./interfaces/IAdmin";
 import * as mongoose from 'mongoose';
 import commonOptions from "./Utils/schemaOptions";
 

@@ -1,6 +1,6 @@
-import { ICliente } from "../../../domain/interfaces/ICliente"
+import { ICliente } from "../../models/interfaces/ICliente"
 
-export interface IClienteService {
+export interface IClienteUseCase {
     getAllClientes() : Promise<Array<ICliente>>;
     getClienteByName(name:String) : Promise<ICliente>;
     addCliente(name:String) : void;

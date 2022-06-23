@@ -1,4 +1,4 @@
-import { IVenda } from "../../../domain/interfaces/IVenda";
+import { IVenda } from "../../../domain/models/interfaces/IVenda";
 import { Venda } from "../../../domain/models/Venda";
 import { IVendaRepository } from "../interfaces/IVendaRepository";
 import { BaseRepository } from "./BaseRepository";

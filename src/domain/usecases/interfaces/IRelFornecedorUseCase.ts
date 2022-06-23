@@ -1,6 +1,6 @@
-import { IRelFornecedor } from "../../../domain/interfaces/IRelFornecedor";
+import { IRelFornecedor } from "../../models/interfaces/IRelFornecedor";
 
-export interface IRelFornecedorService {
+export interface IRelFornecedorUseCase {
     getRelByFornecedorNoDia(fornecedorId: Number, dia: Date) : Promise<IRelFornecedor>;
     addRel(object: IRelFornecedor) : void;
     //deleteRelsByDay(wantedDate: Date) : Promise <IRel_Fornecedor[]>;

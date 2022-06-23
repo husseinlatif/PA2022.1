@@ -1,4 +1,4 @@
-import { IRelFornecedor } from "../interfaces/IRelFornecedor";
+import { IRelFornecedor } from "./interfaces/IRelFornecedor";
 import * as mongoose from 'mongoose';
 
 const relFornecedorSchema = new mongoose.Schema<IRelFornecedor>({

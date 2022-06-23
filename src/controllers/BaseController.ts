@@ -5,12 +5,12 @@ export abstract class BaseController {
     //Método abstrato, implementado por cada classe derivada:
     protected abstract executeImpl(
         req: Request, res: Response
-    ): Promise<void | any>;
+    ) : Promise<void | any>;
 
     //Método exposto ao router:
     public async execute(
         req: Request, res: Response
-    ): Promise<void> {
+    ) : Promise<void> {
         try {
             await this.executeImpl(req, res);
         } catch (err) {

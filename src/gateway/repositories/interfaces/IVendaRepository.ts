@@ -1,4 +1,4 @@
-import { IVenda } from "../../../domain/interfaces/IVenda";
+import { IVenda } from "../../../domain/models/interfaces/IVenda";
 import { IBaseRepository } from "./IBaseRepository";
 
 interface IVendaRepository extends IBaseRepository {

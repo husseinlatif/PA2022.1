@@ -1,8 +1,8 @@
-import { IVenda } from "../../../domain/interfaces/IVenda";
+import { IVenda } from "../../../domain/models/interfaces/IVenda";
 import { IVendaRepository } from "../../repositories/interfaces/IVendaRepository";
-import { IVendaService } from "../interfaces/IVendaService";
+import { IVendaUseCase } from "../interfaces/IVendaUseCase";
 
-class VendaService implements IVendaService {
+class VendaUseCase implements IVendaUseCase {
 
     private readonly _vendaRepository : IVendaRepository;
 
@@ -56,4 +56,4 @@ class VendaService implements IVendaService {
 
 }
 
-export { VendaService };
+export { VendaUseCase };

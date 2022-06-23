@@ -1,4 +1,4 @@
-import { ICliente } from "../interfaces/ICliente";
+import { ICliente } from "./interfaces/ICliente";
 import * as mongoose from "mongoose";
 import commonOptions from "./Utils/schemaOptions";
 
