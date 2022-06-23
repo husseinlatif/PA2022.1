@@ -38,7 +38,6 @@ class VendaUseCase implements IVendaUseCase {
         } else {
             throw Error('Algum erro ocorreu durante a atualização de valor pago dessa venda.');
         }
-
     }
 
     async updateBaixa(vendaId: Number): Promise<void> {
