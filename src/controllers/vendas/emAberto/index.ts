@@ -1,7 +1,9 @@
 import { GetVendasEmAbertoController } from './GetVendasEmAbertoController';
-import { IVendaUseCase } from '../../../domain/usecases/interfaces/IVendaUseCase';
+import { VendaUseCase } from '../../../domain/usecases/implementations/VendaUseCase';
+import { VendaRepository } from '../../../gateway/repositories/implementations/VendaRepository';
 
-let vendaUseCase : IVendaUseCase;
+const vendaRepository = new VendaRepository();
+const vendaUseCase = new VendaUseCase(vendaRepository);
 const getVendasEmAbertoController = new GetVendasEmAbertoController(vendaUseCase);
 
 export { getVendasEmAbertoController };
