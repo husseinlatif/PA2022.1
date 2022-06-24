@@ -11,8 +11,6 @@ mongoose.connect("mongodb://localhost:27017/fish_me");
 createTables();
 
 
-
-
 /* let product = new Produto({name:'carlos'});
 product.save();
 let repo = new ProdutoRepository();
