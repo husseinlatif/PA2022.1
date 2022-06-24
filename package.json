@@ -1,9 +1,10 @@
 {
   "name": "back-end",
   "version": "1.0.0",
-  "description": "Desafio fullstack back-end",
-  "main": "app.js",
+  "description": "trabalho_PA2022.1",
+  "main": "./src/index.ts",
   "scripts": {
+    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,12 +18,14 @@
   },
   "homepage": "https://github.com/husseinlatif/desafiofullstack#readme",
   "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "express": "^4.17.1",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.2.5",
-    "sequelize": "^6.5.0",
-    "sqlite3": "^5.0.2"
+    "mongoose": "^6.4.0",
+    "ts-node": "^10.8.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
   }
 }
