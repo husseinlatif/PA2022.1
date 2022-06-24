@@ -4,6 +4,6 @@ import { RelFornecedorRepository } from "../../../gateway/repositories/implement
 
 const relFornecedorRepository = new RelFornecedorRepository();
 const relFornecedorUseCase = new RelFornecedorUseCase(relFornecedorRepository);
+const getRelByFornecedorNoDiaController = new GetRelByFornecedorNoDiaController(relFornecedorUseCase);
 
-
-
+export { getRelByFornecedorNoDiaController }
