@@ -1,7 +1,7 @@
 import { IProdutoFornecedor } from './IProdutoFornecedor';
 
 export interface IVenda {
-    id: String; //a ideia é ser um GUID, mas o typescript não tem esse tipo como nativo. Poderíamos criar, mas por enquanto não.
+    id: Number; 
     clienteId: Number,
     produtos: Array<IProdutoFornecedor>,
     valorTotal: Number, //float

@@ -6,7 +6,6 @@ class VendaUseCase implements IVendaUseCase {
 
     private readonly _vendaRepository : IVendaRepository;
 
-    //dependency injection -----> ver qual é o melhor jeito de definir as implementações
     constructor(vendaRepository: IVendaRepository) {
         this._vendaRepository = vendaRepository;
     }

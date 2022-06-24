@@ -13,8 +13,6 @@ abstract class BaseRepository implements IBaseRepository{
     public async getAll() : Promise<Array<Type>> {
         try {
             let list = await this._model.find({}).exec().then(res => res);
-            list.map((item => {return {[item.id]:{...item}}}))
-            console.log(list);
             return list;
         } catch (err) {
             console.log(err);

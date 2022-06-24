@@ -2,6 +2,7 @@ import { IRelFornecedor } from "./interfaces/IRelFornecedor";
 import * as mongoose from 'mongoose';
 
 const relFornecedorSchema = new mongoose.Schema<IRelFornecedor>({
+    id: { type: Number, required: true },
     fornecedorId: { type: Number, required: true },
     produtos: { type:[{id:Number, name:String, quantidade:Number, precoUnit: Number}], required:true},
     valorTotalVendido: { type: Number, required: true },
