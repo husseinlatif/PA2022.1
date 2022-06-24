@@ -1,22 +1,22 @@
 import { Request, Response } from 'express';
-import { IVendaUseCase } from "../../../domain/usecases/interfaces/IVendaUseCase";
+import { IClienteUseCase } from "../../../domain/usecases/interfaces/IClienteUseCase";
 import { BaseController } from "../../BaseController";
 
-export class UpdateBaixaVendaController extends BaseController {
+export class GetClienteByNameController extends BaseController {
 
-    private vendaUseCase: IVendaUseCase;
+    private clienteUseCase: IClienteUseCase;
 
-    constructor(vendaUseCase: IVendaUseCase) {
+    constructor(clienteUseCase: IClienteUseCase) {
 
         super();
-        this.vendaUseCase = vendaUseCase;
+        this.clienteUseCase = clienteUseCase;
         
     }
 
     protected async executeImpl(req: Request, res: Response): Promise<void | any> {
         try {
-            //MUDAR AQUI
-            let result = await this.vendaUseCase.updateBaixa(req.body.ALGO);
+
+            let result = await this.clienteUseCase.getClienteByName(req.params.id);
             return this.sucesso<any>(res, result);
 
         } catch (err) {

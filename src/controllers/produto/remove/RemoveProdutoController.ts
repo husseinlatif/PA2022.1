@@ -1,22 +1,22 @@
 import { Request, Response } from 'express';
-import { IVendaUseCase } from "../../../domain/usecases/interfaces/IVendaUseCase";
+import { IProdutoUseCase } from "../../../domain/usecases/interfaces/IProdutoUseCase";
 import { BaseController } from "../../BaseController";
 
-export class UpdateBaixaVendaController extends BaseController {
+export class RemoveProdutoController extends BaseController {
 
-    private vendaUseCase: IVendaUseCase;
+    private produtoUseCase: IProdutoUseCase;
 
-    constructor(vendaUseCase: IVendaUseCase) {
+    constructor(produtoUseCase: IProdutoUseCase) {
 
         super();
-        this.vendaUseCase = vendaUseCase;
+        this.produtoUseCase = produtoUseCase;
         
     }
 
     protected async executeImpl(req: Request, res: Response): Promise<void | any> {
         try {
-            //MUDAR AQUI
-            let result = await this.vendaUseCase.updateBaixa(req.body.ALGO);
+
+            let result = await this.produtoUseCase.removeProduto(req.params.id);
             return this.sucesso<any>(res, result);
 
         } catch (err) {
