@@ -5,6 +5,6 @@ export interface IFornecedorUseCase {
     getAllFornecedores() : Promise<Array<IFornecedor>>;
     getFornecedorByName(name:String) : Promise<IFornecedor>;
     addFornecedor(name:String) : void;
-    updateComissao(fornecedorId: Number, percentil:Number) : Promise<IFornecedor>;
-    removeFornecedor(id:Number) : Promise<Number>;
+    updateComissao(fornecedorId: Number, percentil:Number) : Promise<Boolean | void>;
+    //removeFornecedor(id:Number) : Promise<Number>;
 }

@@ -11,13 +11,12 @@ export class GetRelByFornecedorNoDiaController extends BaseController {
     }
 
     protected async executeImpl(req:Request, res:Response) : Promise<void | any> {
-        const today = new Date();
         try {
-            let result = await this.relFornecedorUseCase.getRelByFornecedorNoDia(req.body.fornecedorId, today);
+            let fornecedorId = parseInt(req.params.fornecedorId);
+            let result = await this.relFornecedorUseCase.getRelByFornecedorNoDia(fornecedorId);
             return this.sucesso<any>(res,result);
         } catch (err) {
             return this.erro(res, err.toString());
         }
     }
-
 }

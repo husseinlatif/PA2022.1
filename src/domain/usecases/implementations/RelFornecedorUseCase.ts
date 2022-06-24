@@ -14,7 +14,8 @@ class RelFornecedorUseCase implements IRelFornecedorUseCase {
         return await this._relFornecedorRepository.addData(relatorio);
     }
     
-    async getRelByFornecedorNoDia(fornecedorId: Number, diaHoje: Date): Promise<IRelFornecedor> {
+    async getRelByFornecedorNoDia(fornecedorId: Number): Promise<IRelFornecedor> {
+        const diaHoje = new Date();
         return await this._relFornecedorRepository.findByIdAndRelDate(fornecedorId, diaHoje);
     }
 
