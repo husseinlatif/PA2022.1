@@ -16,5 +16,5 @@ RUN npm install --legacy-peer-deps
 # Bundle app source
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3333
 CMD [ "npm", "run", "start" ]
