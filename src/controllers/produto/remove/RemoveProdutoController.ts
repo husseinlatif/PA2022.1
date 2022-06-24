@@ -16,7 +16,7 @@ export class RemoveProdutoController extends BaseController {
     protected async executeImpl(req: Request, res: Response): Promise<void | any> {
         try {
 
-            let result = await this.produtoUseCase.removeProduto(req.params.id);
+            let result = await this.produtoUseCase.removeProduto(parseInt(req.params.id));
             return this.sucesso<any>(res, result);
 
         } catch (err) {
