@@ -36,7 +36,7 @@ router.get('/clientes/getByName/:id', (req, res) => getAllProdutosController.exe
 router.delete('/clientes/delete/:id', (req, res) => getAllProdutosController.execute(req,res));
 
 //Rotas de Relatório de Fornecedores
-router.get('/relatorio/getByFornecedorNoDia/:name/:dataDesejada', (req, res) => getRelByFornecedorNoDiaController.execute(req,res));
+router.get('/relatorio/getByFornecedorNoDia/:name/:date', (req, res) => getRelByFornecedorNoDiaController.execute(req,res));
 router.post('/relatorio/addRel', (req,res) => addRelController.execute(req,res));
 
 //Rotas de Fornecedores
