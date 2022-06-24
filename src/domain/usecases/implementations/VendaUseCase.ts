@@ -24,7 +24,7 @@ class VendaUseCase implements IVendaUseCase {
         return await this._vendaRepository.findByAttribute({_id:clienteId, dataVenda:date})
     }
 
-    async updateValorPag(vendaId: Number, valorAcrescentado: Number): Promise<void> {
+    async updateValorPag(vendaId: Number, valorAcrescentado: Number): Promise<Boolean> {
         //ideia é fazer algo como um += só que numa mesma transação
         //mongo fornece essa opção como um comando de incremento com valor associado
 
@@ -32,19 +32,19 @@ class VendaUseCase implements IVendaUseCase {
         
         let updated : Boolean | void = await this._vendaRepository.updateData(vendaId, incrementalUpdate);
         if(updated) {
-            return null;
+            return updated;
         } else {
             throw Error('Algum erro ocorreu durante a atualização de valor pago dessa venda.');
         }
     }
 
-    async updateBaixa(vendaId: Number): Promise<void> {
+    async updateBaixa(vendaId: Number): Promise<Boolean> {
         
         let updateData = {baixa:true};
-        
+
         let updated :Boolean | void = await this._vendaRepository.updateData(vendaId, updateData);
         if(updated) {
-            return null;
+            return updated;
         } else {
             throw Error('Algum erro ocorreu durante a baixa dessa venda.');
         }

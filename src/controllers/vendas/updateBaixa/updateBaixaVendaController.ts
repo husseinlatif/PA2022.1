@@ -15,8 +15,8 @@ export class UpdateBaixaVendaController extends BaseController {
 
     protected async executeImpl(req: Request, res: Response): Promise<void | any> {
         try {
-            //MUDAR AQUI
-            let result = await this.vendaUseCase.updateBaixa(req.body.ALGO);
+            let id = parseInt(req.params.id);
+            let result = await this.vendaUseCase.updateBaixa(id);
             return this.sucesso<any>(res, result);
 
         } catch (err) {

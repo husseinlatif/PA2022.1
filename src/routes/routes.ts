@@ -23,7 +23,7 @@ router.get('/vendas/getEmAberto', (req, res) => getVendasEmAbertoController.exec
 router.get('/vendas/getByClienteNoDia/:id/:date', (req, res) => addVendaController.execute(req,res));
 router.post('/vendas/add', (req, res) => getVendasByClienteNoDiaController.execute(req,res));
 router.put('/vendas/updateValorPag', (req, res) => updateValorPagVendaController.execute(req,res));
-router.put('/vendas/updateBaixa', (req, res) => updateBaixaController.execute(req,res));
+router.put('/vendas/updateBaixa/:id', (req, res) => updateBaixaController.execute(req,res));
 
 //Rotas de produtos
 router.get('/produtos/list', (req, res) => getAllProdutosController.execute(req,res));
@@ -38,7 +38,7 @@ router.get('/clientes/getByName/:id', (req, res) => getAllProdutosController.exe
 router.delete('/clientes/delete/:id', (req, res) => getAllProdutosController.execute(req,res));
 
 //Rotas de Relatório de Fornecedores
-router.get('/relatorio/getByFornecedorNoDia', (req, res) => getRelByFornecedorNoDiaController.execute(req,res));
+router.get('/relatorio/getByFornecedorNoDia/:name/:date', (req, res) => getRelByFornecedorNoDiaController.execute(req,res));
 router.post('/relatorio/addRel', (req,res) => addRelController.execute(req,res));
 
 //Rotas de Fornecedores
