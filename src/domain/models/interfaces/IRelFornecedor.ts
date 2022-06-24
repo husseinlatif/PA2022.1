@@ -1,7 +1,7 @@
 import { IProdutoFornecedor } from "./IProdutoFornecedor";
 export interface IRelFornecedor {
     id:Number, //pode ser um GUID também
-    fornecedorId: Number, //int
+    fornecedorName: String, //int
     produtos: Array<IProdutoFornecedor>,
     valorTotalVendido: Number, //float
     comissao?: Number, //float, para ser aplicado como porcentagem

@@ -6,7 +6,7 @@ import commonOptions from "./Utils/schemaOptions";
 
 const vendaSchema = new mongoose.Schema<IVenda>({
     id: { type: Number, required:true },
-    clienteId: { type: Number, required: true},
+    clienteName: { type: String, required: true},
     produtos: { type:[{id:Number, name:String, quantidade:Number, precoUnit: Number}], required:true},
     valorTotal: { type:Number, required:true },
     dataVenda: { type:Date, required:true },

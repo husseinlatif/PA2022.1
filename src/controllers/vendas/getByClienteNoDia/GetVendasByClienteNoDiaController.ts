@@ -15,7 +15,7 @@ export class GetVendasByClienteNoDiaController extends BaseController {
 
     protected async executeImpl(req: Request, res: Response): Promise<void | any> {
         try {
-            let result = await this.vendaUseCase.getVendasByClienteNoDia(req.params.id, req.params.date);
+            let result = await this.vendaUseCase.getVendasByClienteNoDia(req.params.clienteName, req.params.date);
             return this.sucesso<any>(res, result);
 
         } catch (err) {

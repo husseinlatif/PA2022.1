@@ -20,8 +20,8 @@ class VendaUseCase implements IVendaUseCase {
         return await this._vendaRepository.addData(dadosVenda);
     }
 
-    async getVendasByClienteNoDia(clienteId: Number, date: String): Promise<IVenda | IVenda[]> {
-        return await this._vendaRepository.findByAttribute({_id:clienteId, dataVenda:date})
+    async getVendasByClienteNoDia(clienteName: String, date: String): Promise<IVenda | IVenda[]> {
+        return await this._vendaRepository.findByAttribute({clienteName:clienteName, dataVenda:date})
     }
 
     async updateValorPag(vendaId: Number, valorAcrescentado: Number): Promise<Boolean> {
