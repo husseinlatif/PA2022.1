@@ -19,6 +19,6 @@ router.put('/vendas/updateBaixa', (req, res) => updateBaixaController.execute(re
 
 //Rotas de Relatório de Fornecedores
 router.get('/relatorio/getByFornecedorNoDia', (req, res) => getRelByFornecedorNoDiaController.execute(req,res));
-router.post('/relatorio/addRel', (req,res) => addRelController);
+router.post('/relatorio/addRel', (req,res) => addRelController.execute(req,res));
 
 export { router };
