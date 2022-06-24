@@ -22,7 +22,7 @@ router.get('/vendas/getEmAberto', (req, res) => getVendasEmAbertoController.exec
 router.get('/vendas/getByClienteNoDia/:id', (req, res) => addVendaController.execute(req,res));
 router.post('/vendas/add', (req, res) => getVendasByClienteNoDiaController.execute(req,res));
 router.put('/vendas/updateValorPag', (req, res) => updateValorPagVendaController.execute(req,res));
-router.put('/vendas/updateBaixa', (req, res) => updateBaixaController.execute(req,res));
+router.put('/vendas/updateBaixa/:id', (req, res) => updateBaixaController.execute(req,res));
 
 //Rotas de produtos
 router.get('/produtos/list', (req, res) => getAllProdutosController.execute(req,res));
