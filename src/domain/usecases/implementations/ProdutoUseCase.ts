@@ -14,6 +14,10 @@ class ProdutoUseCase implements IProdutoUseCase {
         return await this._produtoRepository.getAll();
     }
 
+    async getProdutosById(filter: Object) : Promise<IProduto[] | IProduto> {
+        return await this._produtoRepository.findByAttribute(filter);
+    }
+
     async addProduct(name: String) : Promise<void> {
         return await this._produtoRepository.addData(name);
     }

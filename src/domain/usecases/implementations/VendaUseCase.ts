@@ -20,9 +20,8 @@ class VendaUseCase implements IVendaUseCase {
         return await this._vendaRepository.addData(dadosVenda);
     }
 
-    async getVendasByClienteNoDia(clienteId: Number): Promise<IVenda | IVenda[]> {
-        let dataDeHoje = new Date(); // TODO --> CHECAR O FORMATO QUE VAI PRA BASE DIREITINHO
-        return await this._vendaRepository.findByAttribute({_id:clienteId, dataVenda:dataDeHoje})
+    async getVendasByClienteNoDia(clienteId: Number, date: String): Promise<IVenda | IVenda[]> {
+        return await this._vendaRepository.findByAttribute({_id:clienteId, dataVenda:date})
     }
 
     async updateValorPag(vendaId: Number, valorAcrescentado: Number): Promise<void> {

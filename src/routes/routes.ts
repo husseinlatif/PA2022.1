@@ -13,13 +13,14 @@ import { getAllFornecedoresController } from '../controllers/fornecedores/getAll
 import { addFornecedorController } from '../controllers/fornecedores/addFornecedor';
 import { getByNameController } from '../controllers/fornecedores/getByName';
 import { updateComisasoController } from '../controllers/fornecedores/updateComissao';
+import { getProdutosByIdController } from '../controllers/produto/getById';
 
 
 const router = Router();
 
 //Rotas de Vendas
 router.get('/vendas/getEmAberto', (req, res) => getVendasEmAbertoController.execute(req,res));
-router.get('/vendas/getByClienteNoDia/:id', (req, res) => addVendaController.execute(req,res));
+router.get('/vendas/getByClienteNoDia/:id/:date', (req, res) => addVendaController.execute(req,res));
 router.post('/vendas/add', (req, res) => getVendasByClienteNoDiaController.execute(req,res));
 router.put('/vendas/updateValorPag', (req, res) => updateValorPagVendaController.execute(req,res));
 router.put('/vendas/updateBaixa', (req, res) => updateBaixaController.execute(req,res));
@@ -28,6 +29,7 @@ router.put('/vendas/updateBaixa', (req, res) => updateBaixaController.execute(re
 router.get('/produtos/list', (req, res) => getAllProdutosController.execute(req,res));
 router.delete('/produtos/delete/:id', (req, res) => removeProdutoController.execute(req,res));
 router.post('/produtos/add', (req, res) => addProdutoController.execute(req,res));
+router.get('/produtos/get/:name', (req, res) => getProdutosByIdController.execute(req,res));
 
 //Rotas de clientes
 router.get('/clientes/getAll', (req, res) => getAllProdutosController.execute(req,res));
