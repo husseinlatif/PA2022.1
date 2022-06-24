@@ -12,9 +12,9 @@ export class GetRelByFornecedorNoDiaController extends BaseController {
 
     protected async executeImpl(req:Request, res:Response) : Promise<void | any> {
         try {
-            let fornecedorId = parseInt(req.params.fornecedorId);
+            let fornecedorName = req.params.fornecedorName;
             let dataDesejada = new Date(req.params.date);
-            let result = await this.relFornecedorUseCase.getRelByFornecedorNoDia(fornecedorId,dataDesejada);
+            let result = await this.relFornecedorUseCase.getRelByFornecedorNoDia(fornecedorName,dataDesejada);
             return this.sucesso<any>(res,result);
         } catch (err) {
             return this.erro(res, err.toString());
