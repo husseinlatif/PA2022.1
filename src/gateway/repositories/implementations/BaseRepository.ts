@@ -1,6 +1,7 @@
 import { Model } from 'mongoose';
 import { Type } from "typescript";
 import { IBaseRepository } from "../interfaces/IBaseRepository";
+import mongoose from 'mongoose';
 
 abstract class BaseRepository implements IBaseRepository{
 
@@ -42,7 +43,7 @@ abstract class BaseRepository implements IBaseRepository{
             return changedData;
         } catch (err) {
             console.log(err);
-            return null
+            return false
         }
     }
 
