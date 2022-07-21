@@ -1,6 +1,6 @@
 import { GetRelByFornecedorNoDiaController } from "./getRelByFornecedorNoDiaController";
 import { RelFornecedorUseCase } from "../../../domain/usecases/implementations/RelFornecedorUseCase";
-import { RelFornecedorRepository } from "../../../gateway/repositories/implementations/RelFornecedorRepository";
+import { RelFornecedorRepository } from "../../../gateway/repositories/implementations/RelFornecedor/RelFornecedorRepository";
 
 const relFornecedorRepository = new RelFornecedorRepository();
 const relFornecedorUseCase = new RelFornecedorUseCase(relFornecedorRepository);

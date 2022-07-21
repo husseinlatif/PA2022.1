@@ -1,7 +1,7 @@
-import { Fornecedor } from "../../../domain/models/Fornecedor";
-import { IFornecedor } from "../../../domain/models/interfaces/IFornecedor";
-import { IFornecedorRepository } from "../interfaces/IFornecedorRepository";
-import { BaseRepository } from "./BaseRepository";
+import { Fornecedor } from "../../../../domain/models/Fornecedor";
+import { IFornecedor } from "../../../../domain/models/interfaces/IFornecedor";
+import { IFornecedorRepository } from "../../interfaces/IFornecedorRepository";
+import { BaseRepository } from "../BaseRepository/BaseRepository";
 
 class FornecedorRepository extends BaseRepository implements IFornecedorRepository{
 

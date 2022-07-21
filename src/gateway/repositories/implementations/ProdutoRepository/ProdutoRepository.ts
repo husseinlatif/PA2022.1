@@ -1,7 +1,7 @@
-import { Produto } from "../../../domain/models/Produto";
-import { IProduto } from "../../../domain/models/interfaces/IProduto";
-import { BaseRepository } from "./BaseRepository";
-import { IProdutoRepository } from '../interfaces/IProdutoRepository';
+import { Produto } from "../../../../domain/models/Produto";
+import { IProduto } from "../../../../domain/models/interfaces/IProduto";
+import { BaseRepository } from "../BaseRepository/BaseRepository";
+import { IProdutoRepository } from '../../interfaces/IProdutoRepository';
 
 class ProdutoRepository extends BaseRepository implements IProdutoRepository {
 

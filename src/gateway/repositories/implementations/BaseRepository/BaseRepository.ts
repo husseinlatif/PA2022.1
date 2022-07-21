@@ -1,6 +1,6 @@
 import { Model } from 'mongoose';
 import { Type } from "typescript";
-import { IBaseRepository } from "../interfaces/IBaseRepository";
+import { IBaseRepository } from "../../interfaces/IBaseRepository";
 import mongoose from 'mongoose';
 
 abstract class BaseRepository implements IBaseRepository{

@@ -1,5 +1,5 @@
 import { AddRelController } from './AddRelController';
-import { RelFornecedorRepository } from '../../../gateway/repositories/implementations/RelFornecedorRepository';
+import { RelFornecedorRepository } from '../../../gateway/repositories/implementations/RelFornecedor/RelFornecedorRepository';
 import { RelFornecedorUseCase } from '../../../domain/usecases/implementations/RelFornecedorUseCase';
 
 const relFornecedorRepository = new RelFornecedorRepository();

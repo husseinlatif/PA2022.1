@@ -1,7 +1,7 @@
 import { IProdutoFornecedor } from './IProdutoFornecedor';
 
 export interface IVenda {
-    id: Number; 
+    _id: Number; 
     clienteName: String,
     produtos: Array<IProdutoFornecedor>,
     valorTotal: Number, //float
