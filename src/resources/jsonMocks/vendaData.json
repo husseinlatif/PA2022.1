@@ -1,19 +1,34 @@
 [
     {
-        "_id":"aosjdjasdq",
+        "_id":"62daa7ca413a86cd28ca901d",
         "clienteName":"Kiko Loureiro",
         "produtos":[
             {
-                "id":"1212213213",
                 "name":"Camarão de Mar",
                 "quantidade":"120",
                 "precoUnit":"4.50"
             }
         ],
         "valorTotal":"23.00",
-        "dataVenda":"Fri Jul 22 2022 02:13:11 GMT-0300 ",
-        "dataPrazo":"Qui Ago 22 2022 02:13:11 GMT-0300 ",
-        "valorPago":"12904012412",
+        "dataVenda":"2015-03-25T12:00:00Z",
+        "dataPrazo":"2015-04-25T12:00:00Z",
+        "valorPago":"1290.02",
         "baixa":false
+    },
+    {
+        "_id":"62daa7ca413a86cd28ca901d",
+        "clienteName":"John Mayer",
+        "produtos":[
+            {
+                "name":"Camarão de Mar",
+                "quantidade":"120",
+                "precoUnit":"4.50"
+            }
+        ],
+        "valorTotal":"23.00",
+        "dataVenda":"2015-03-25T12:00:00Z",
+        "dataPrazo":"2015-04-25T12:00:00Z",
+        "valorPago":"1290.02",
+        "baixa":true
     }
 ]

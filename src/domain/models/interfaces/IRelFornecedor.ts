@@ -10,4 +10,5 @@ export interface IRelFornecedor {
     frete?: Number, //float, para ser aplicado como porcentagem
     outros?: Number, //float, como real
     totalAPagar: Number //float, como real
+    dataEmissao:Date //ISO date
 }

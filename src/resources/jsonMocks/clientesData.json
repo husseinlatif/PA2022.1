@@ -1,14 +1,10 @@
 [
     {
-        "id":1,
-        "name":"Eric Clapton"
+        "_id": "62daa84ddbbae95c9d38defb",
+        "name":"Kiko Loureiro"
     },
     {
-        "id":2,
+        "_id": "62daa840ac926cde1744ab27",
         "name":"John Mayer"
-    },
-    {
-        "id":3,
-        "name":"Stevie Ray Vaughan"
     }
 ]

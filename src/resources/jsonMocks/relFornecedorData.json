@@ -1,11 +1,10 @@
 
 [
     {
-        "_id":"asdkaksodkasod",
+        "_id":"62daa486547fa03fa0794063",
         "fornecedorName":"Keith Richards",
         "produtos":[
             {
-                "id":"1212213213",
                 "name":"Camarão de Mar",
                 "quantidade":"120",
                 "precoUnit":"4.50"
@@ -17,20 +16,19 @@
         "carreto":"2.00",
         "frete":"15.00",
         "outros":"2.00",
-        "totalAPagar":"143.90"
+        "totalAPagar":"143.90",
+        "dataEmissao":"2015-03-25T12:00:00Z"
     },
     {
-        "_id":"asdkaksodkasod",
-        "fornecedorName":"Janes Joplin",
+        "_id":"62daa543bd8ba4a92201525c",
+        "fornecedorName":"George Harrison",
         "produtos":[
             {
-                "id":"123151534",
                 "name":"Anchova",
                 "quantidade":"120",
                 "precoUnit":"4.50"
             },
             {
-                "id":"a13058013",
                 "name":"Tilápia",
                 "quantidade":"12",
                 "precoUnit":"1.50"
@@ -42,7 +40,8 @@
         "carreto":"2.00",
         "frete":"0.00",
         "outros":"0.00",
-        "totalAPagar":"190.00"
+        "totalAPagar":"190.00",
+        "dataEmissao":"2015-03-25T12:00:00Z"
     }
 ]
 

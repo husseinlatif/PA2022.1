@@ -5,9 +5,9 @@ import commonOptions from "./Utils/schemaOptions";
 //TODO ver como tratar o id aqui, talvez de momento seja bom deixar normal
 
 const vendaSchema = new mongoose.Schema<IVenda>({
-    _id: { type: Number, required:true },
+    _id: { type: mongoose.Schema.Types.ObjectId, required:true },
     clienteName: { type: String, required: true},
-    produtos: { type:[{id:Number, name:String, quantidade:Number, precoUnit: Number}], required:true},
+    produtos: { type:[{name:String, quantidade:Number, precoUnit: Number}], required:true},
     valorTotal: { type:Number, required:true },
     dataVenda: { type:Date, required:true },
     dataPrazo: { type:Date, required:true },
