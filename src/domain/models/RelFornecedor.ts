@@ -12,7 +12,7 @@ const relFornecedorSchema = new mongoose.Schema<IRelFornecedor>({
     frete: { type: Number, required: false },
     outros: { type: Number, required: false },
     totalAPagar: { type: Number, required: true },
-    dataEmissao: { type:Date, required:true }
+    dataEmissao: { type:String, required:true }
 })
 
 const RelFornecedor = mongoose.model('rel_fornecedores', relFornecedorSchema);

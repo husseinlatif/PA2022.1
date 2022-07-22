@@ -17,7 +17,7 @@
         "frete":"15.00",
         "outros":"2.00",
         "totalAPagar":"143.90",
-        "dataEmissao":"2015-03-25T12:00:00Z"
+        "dataEmissao":"2011-10-05T14:48:00.000Z"
     },
     {
         "_id":"62daa543bd8ba4a92201525c",
@@ -41,7 +41,7 @@
         "frete":"0.00",
         "outros":"0.00",
         "totalAPagar":"190.00",
-        "dataEmissao":"2015-03-25T12:00:00Z"
+        "dataEmissao":"2011-10-05T14:48:00.000Z"
     }
 ]
 
