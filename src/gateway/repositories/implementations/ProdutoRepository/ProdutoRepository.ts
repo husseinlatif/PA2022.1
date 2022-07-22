@@ -9,13 +9,12 @@ class ProdutoRepository extends BaseRepository implements IProdutoRepository {
         super(Produto);
     }
 
-    async findByAttribute(attributes: Object): Promise<IProduto | IProduto[]> {
+    async getByName(name:String): Promise<IProduto> {
         try {
-            let produtos = await Produto.find({ ...attributes }).exec().then(res => res);
-            return produtos;
+            let produto = await Produto.findOne({name}).exec().then(res => res);
+            return produto;
         } catch (err) {
-            console.log(err);
-            return null;
+            throw Error(err.message)
         }
     }
 }

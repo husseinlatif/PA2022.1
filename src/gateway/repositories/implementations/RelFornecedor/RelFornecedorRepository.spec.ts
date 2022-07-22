@@ -1,6 +1,6 @@
 import { RelFornecedor } from '../../../../domain/models/RelFornecedor';
 import {closeDatabase, connect } from '../../../../tests/testDb';
-import relFornecedorJson from '../../../../resources/jsonMocks/relFornecedorData.json';
+import relFornecedorJson from '../../../../tests/jsonMocks/relFornecedorData.json';
 import { RelFornecedorRepository } from './RelFornecedorRepository';
 import mongoose from 'mongoose';
 

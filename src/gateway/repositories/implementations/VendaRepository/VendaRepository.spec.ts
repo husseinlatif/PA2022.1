@@ -1,6 +1,6 @@
 import { Venda } from '../../../../domain/models/Venda';
 import {closeDatabase, connect } from '../../../../tests/testDb';
-import vendaJson from '../../../../resources/jsonMocks/vendaData.json';
+import vendaJson from '../../../../tests/jsonMocks/vendaData.json';
 import { VendaRepository } from './VendaRepository';
 import mongoose from 'mongoose';
 

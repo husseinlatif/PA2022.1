@@ -3,7 +3,7 @@ import { IProduto } from '../../../domain/models/interfaces/IProduto';
 
 interface IProdutoRepository extends IBaseRepository {
     //possíveis métodos diferentes
-    findByAttribute(attributes:Object) : Promise<IProduto | IProduto[]>; 
+    getByName(name:String) : Promise<IProduto>; 
 }
 
 export { IProdutoRepository };
