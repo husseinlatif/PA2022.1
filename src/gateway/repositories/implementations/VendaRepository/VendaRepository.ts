@@ -8,13 +8,12 @@ class VendaRepository extends BaseRepository implements IVendaRepository {
         super(Venda);        
     }
 
-    async findByClientNameAndDate(nomeCliente:String, dataVenda:Date): Promise<IVenda | IVenda[]> {
+    async findByClientNameAndDate(nomeCliente:String, dataVenda:String): Promise<IVenda[]> {
         try {
             let vendas = await Venda.find({clienteName:nomeCliente, dataVenda}).exec().then(res => res);
             return vendas;
         } catch(err) {
-            console.log(err);
-            return null;
+            throw Error(err.message);
         }
     }
 }

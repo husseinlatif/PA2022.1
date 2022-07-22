@@ -13,8 +13,7 @@ class RelFornecedorRepository extends BaseRepository implements IRelFornecedorRe
             let relatorio = await RelFornecedor.findOne({fornecedorName:name, dataEmissao:relDate}).exec().then(res => res);
             return relatorio;
         } catch(err) {
-            console.log(err);
-            return null;
+            throw Error(err.message);
         }
     }
 

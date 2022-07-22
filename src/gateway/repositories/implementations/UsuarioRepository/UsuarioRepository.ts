@@ -14,8 +14,7 @@ abstract class UsuarioRepository extends BaseRepository implements IUsuarioRepos
             const registerFound = await this._model.findOne({name}).exec().then(res => res);
             return registerFound;
         } catch (err) {
-            console.log(err);
-            return null
+            throw Error(err.message);
         }
     }
 } 
