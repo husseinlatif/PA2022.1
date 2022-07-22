@@ -1,18 +1,19 @@
 import { Admin } from '../../../../domain/models/Admin';
 import {closeDatabase, connect, createTestCollection } from '../../../../tests/testDb';
-//import adminJson from '../../../../resources/jsonMocks/adminData.json';
+import adminJson from '../../../../resources/jsonMocks/adminData.json';
 
-describe("Venda Repository Unit Tests", () => {
+describe("Admin Repository Unit Tests", () => {
 
     beforeAll(async () => {
         await connect();
+        createTestCollection();
     })
 
     afterAll(async () => {
         await closeDatabase();
     })
 
-    it('Should have inserted entries in relatorios', async () => {
+    it('Should have inserted two entries in AdminCollection', async () => {
         for(let i = 0; i < 2; i++) {
             let admin = new Admin(adminJson[i]);
             await admin.save();
@@ -21,7 +22,7 @@ describe("Venda Repository Unit Tests", () => {
         expect(count).toBe(2);
     })
 
-    it('Should find venda(s) by client name and given date', async() => {
+    it('Should return an Admin instance by its name', async() => {
         
     })
     

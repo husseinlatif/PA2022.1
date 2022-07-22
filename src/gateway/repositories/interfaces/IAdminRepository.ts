@@ -1,6 +1,6 @@
-import { IBaseRepository } from "./IBaseRepository";
+import { IUsuarioRepository } from "./IUsuarioRepository";
 
-interface IAdminRepository extends IBaseRepository {
+interface IAdminRepository extends IUsuarioRepository {
     //possíveis métodos diferentes
 }
 

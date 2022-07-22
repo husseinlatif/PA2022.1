@@ -2,7 +2,7 @@ import { Admin } from '../../../../domain/models/Admin';
 import {closeDatabase, connect, createTestCollection } from '../../../../tests/testDb';
 //import adminJson from '../../../../resources/jsonMocks/adminData.json';
 
-describe("Venda Repository Unit Tests", () => {
+describe("Cliente Repository Unit Tests", () => {
 
     beforeAll(async () => {
         await connect();
@@ -21,7 +21,7 @@ describe("Venda Repository Unit Tests", () => {
         expect(count).toBe(2);
     })
 
-    it('Should find venda(s) by client name and given date', async() => {
+    it('Should find client by name', async() => {
         
     })
     

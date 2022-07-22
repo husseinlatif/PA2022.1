@@ -1,8 +1,7 @@
-import { IBaseRepository } from "./IBaseRepository";
-import { IFornecedor } from '../../../domain/models/interfaces/IFornecedor';
+import { IUsuarioRepository } from "./IUsuarioRepository";
 
-interface IFornecedorRepository extends IBaseRepository {
-    findByName(name:String):Promise<IFornecedor>;
+interface IFornecedorRepository extends IUsuarioRepository {
+    //
 }
 
 export { IFornecedorRepository };

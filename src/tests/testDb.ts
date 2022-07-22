@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
+import { Test } from './TestCollection';
 
 let mongod;
 
@@ -19,6 +20,15 @@ const closeDatabase = async() => {
     await mongod.stop();
 }
 
+const createTestCollection = async () => {
+    await Test.createCollection();
+}
+
+const insertInitialFakeData = async() => {
+    const fakeData = new Test({name:"Sister Rosetta Tharpe", mutableProperty:2000});
+    await fakeData.save();
+}
+
 //necessário para termos uma base limpa para cada teste unitário
 /* const clearDatabase = async() => {
     let connection = mongoose.connection;
@@ -35,4 +45,4 @@ const closeDatabase = async() => {
     }
 } */
 
-export { connect, closeDatabase }
+export { connect, closeDatabase, createTestCollection, insertInitialFakeData }

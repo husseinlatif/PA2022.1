@@ -1,11 +1,10 @@
 import { Model } from 'mongoose';
 import { Type } from "typescript";
 import { IBaseRepository } from "../../interfaces/IBaseRepository";
-import mongoose from 'mongoose';
 
 abstract class BaseRepository implements IBaseRepository{
 
-    private _model: Model<any>;
+    public _model: Model<any>;
 
     constructor(model: Model<any>) {
         this._model = model;
@@ -31,9 +30,12 @@ abstract class BaseRepository implements IBaseRepository{
         }
     }
 
-    async addData(data: Object): Promise<void> {
+    async addData(data: Object): Promise<any> {        
         let newEntry = new this._model({...data});
-        await newEntry.save((err) => {if(err) console.log(err)});
+        let insertedEntry = await newEntry.save().then(res => res);
+        //TO DO ----> tratar erro por fora!
+        return insertedEntry;
+        
     }
 
     async updateData(id:Number, data: Object): Promise<Boolean> {

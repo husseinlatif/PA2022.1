@@ -1,6 +1,6 @@
 import { IProdutoFornecedor } from "./IProdutoFornecedor";
 export interface IRelFornecedor {
-    id:Number, //pode ser um GUID também
+    _id:Number, //pode ser um GUID também
     fornecedorName: String, //int
     produtos: Array<IProdutoFornecedor>,
     valorTotalVendido: Number, //float

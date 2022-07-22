@@ -8,7 +8,7 @@ class RelFornecedorRepository extends BaseRepository implements IRelFornecedorRe
         super(RelFornecedor);
     }
 
-    async findByIdAndRelDate(name: String, relDate: Date): Promise<IRelFornecedor> {
+    async findByNameAndRelDate(name: String, relDate: Date): Promise<IRelFornecedor> {
         try {
             let relatorio = await RelFornecedor.findOne({fornecedorName:name, dataVenda:relDate}).exec().then(res => res);
             return relatorio;

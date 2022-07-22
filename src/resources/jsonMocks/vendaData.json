@@ -1,0 +1,19 @@
+[
+    {
+        "_id":"aosjdjasdq",
+        "clienteName":"Kiko Loureiro",
+        "produtos":[
+            {
+                "id":"1212213213",
+                "name":"Camarão de Mar",
+                "quantidade":"120",
+                "precoUnit":"4.50"
+            }
+        ],
+        "valorTotal":"23.00",
+        "dataVenda":"Fri Jul 22 2022 02:13:11 GMT-0300 ",
+        "dataPrazo":"Qui Ago 22 2022 02:13:11 GMT-0300 ",
+        "valorPago":"12904012412",
+        "baixa":false
+    }
+]
